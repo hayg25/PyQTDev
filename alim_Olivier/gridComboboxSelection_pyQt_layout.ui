@@ -6,46 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>860</width>
-    <height>552</height>
+    <width>993</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboBoxType">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>60</y>
-     <width>261</width>
+     <x>140</x>
+     <y>50</y>
+     <width>221</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>17</pointsize>
+     <pointsize>14</pointsize>
     </font>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>220</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
    </property>
   </widget>
   <widget class="QScrollArea" name="scrollArea">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>170</y>
-     <width>331</width>
-     <height>281</height>
+     <x>50</x>
+     <y>90</y>
+     <width>731</width>
+     <height>321</height>
     </rect>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
    </property>
    <property name="widgetResizable">
     <bool>true</bool>
@@ -55,12 +48,125 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>327</width>
-      <height>277</height>
+      <width>727</width>
+      <height>317</height>
      </rect>
     </property>
    </widget>
   </widget>
+  <widget class="QComboBox" name="comboBoxZone">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>50</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectButton">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>120</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select All</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="startButton">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>160</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start All</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopButton">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>200</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop All</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>931</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Power Supply</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Elements</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>43</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zones</string>
+    </property>
+   </widget>
+  </widget>
+  <zorder>groupBox</zorder>
+  <zorder>comboBoxType</zorder>
+  <zorder>scrollArea</zorder>
+  <zorder>comboBoxZone</zorder>
+  <zorder>selectButton</zorder>
+  <zorder>startButton</zorder>
+  <zorder>stopButton</zorder>
  </widget>
  <resources/>
  <connections/>

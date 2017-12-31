@@ -64,7 +64,7 @@ class MyDialog(QtGui.QWidget):
   def getFilters(self):
     # Dictionnaire du filtre
     global filters
-    filters = {"Dipole":"DP", "Quadripole":"QP", "Sextupole":"SP","Steerer":"STR", "All":"All"}
+    filters = {"Coil":"COL", "Dipole":"DP", "Quadripole":"QP", "Sextupole":"SP","Steerer":"STR", "All":"All"}
     #return les clefs du filtre
     return map(str,filters.keys())
 	
