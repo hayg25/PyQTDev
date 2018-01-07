@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: python-magnetpanel
+Version: 0.7.1
+Summary: QT widget for controlling a magnet circuit.
+Home-page: http://www.maxlab.lu.se
+Author: Johan Forsberg
+Author-email: johan.forsberg@maxlab.lu.se
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

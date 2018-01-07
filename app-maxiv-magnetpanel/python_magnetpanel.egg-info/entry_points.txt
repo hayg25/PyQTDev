@@ -1,0 +1,4 @@
+[console_scripts]
+ctmagnet = magnetpanel:magnet_main
+cttrimcoil = magnetpanel:trimcoil_main
+

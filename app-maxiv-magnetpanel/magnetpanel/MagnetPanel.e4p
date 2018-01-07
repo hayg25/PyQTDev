@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project MagnetPanel -->
+<!-- Saved: 2017-12-30, 23:40:10 -->
+<!-- Copyright (C) 2017 Hayg Guler,  -->
+<Project version="5.1">
+  <Language>en_US</Language>
+  <Hash>ce18c318dff6838f2f84e71d7a4752c2010ce028</Hash>
+  <ProgLanguage mixed="0">Python2</ProgLanguage>
+  <ProjectType>Qt4</ProjectType>
+  <Description></Description>
+  <Version>0.1</Version>
+  <Author>Hayg Guler</Author>
+  <Email></Email>
+  <Eol index="1"/>
+  <Sources>
+    <Source>utils/maxvaluebar.py</Source>
+    <Source>utils/maxfrom.py</Source>
+    <Source>utils/widgets.py</Source>
+    <Source>utils/switchboard.py</Source>
+    <Source>utils/__init__.py</Source>
+    <Source>utils/maxlineedit.py</Source>
+    <Source>utils/resettable.py</Source>
+    <Source>resource/__init__.py</Source>
+    <Source>resource/rc_switchboard.py</Source>
+    <Source>__main__.py</Source>
+    <Source>__init__.py</Source>
+    <Source>widget/main.py</Source>
+    <Source>widget/panels.py</Source>
+    <Source>widget/__init__.py</Source>
+  </Sources>
+  <Forms>
+    <Form>utils/ui/SwitchBoardPanel.ui</Form>
+  </Forms>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.ptl" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py2" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw2" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>

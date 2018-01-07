@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
+<!-- eric6 tasks file for project MagnetPanel -->
+<!-- Saved: 2017-12-31, 21:19:04 -->
+<Tasks version="5.1">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: clean up and complete the error handling; e.g. no limits,</Summary>
+    <Description></Description>
+    <Created>2017-12-31, 21:19:01</Created>
+    <Resource>
+      <Filename>utils/maxvaluebar.py</Filename>
+      <Linenumber>117</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>
