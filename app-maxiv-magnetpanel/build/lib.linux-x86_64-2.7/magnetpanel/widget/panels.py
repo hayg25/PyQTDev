@@ -226,9 +226,18 @@ class MagnetCircuitPanel(TaurusWidget):
         if device:
             self.form.setModel(["%s/%s" % (device, attribute)
                                 for attribute in self.attrs])
-            db = PyTango.Database()
-            magnet = db.get_device_property(device, "MagnetProxies")["MagnetProxies"][0]
-            magnet_type = PyTango.Database().get_device_property(magnet, "Type")["Type"][0]
+  
+            #---- Partie qui correspond a l'appel de la bdd de Tango 
+            # avec types d'aimant etc ... on peut le faire a la main pour tester 
+            # pour le moment nous sommes obliges de sauter cette partie
+            db_ok=False
+            if db_ok:
+                db = PyTango.Database()
+                magnet = db.get_device_property(device, "MagnetProxies")["MagnetProxies"][0]
+                magnet_type = PyTango.Database().get_device_property(magnet, "Type")["Type"][0]
+            else:
+                magnet_type = 'Dipole'
+            
             self.magnet_type_label.setText("Magnet type: <b>%s</b>" % magnet_type)
             attrname = "%s/%s" % (device, "MainFieldComponent")
             self.valuebar.setModel(attrname)
@@ -254,7 +263,7 @@ class CyclePanel(TaurusWidget):
         TaurusWidget.__init__(self, parent)
         self._setup_ui()
         print('CyclePanel juste avant setmodel')
-       # self.setModel('sys/tg_test/1')
+    #    self.setModel('sys/tg_test/1')
 
     def scaleSize(self):
         size = self.form.scrollArea.widget().frameSize()
@@ -384,7 +393,7 @@ class MagnetListPanel(TaurusWidget):
         TaurusWidget.__init__(self, parent)
         self._setup_ui()
         print('MagnetListPanel juste avant setmodel')
-       # self.setModel('sys/tg_test/1')
+        self.setModel('sys/tg_test/1')
 
     def _setup_ui(self):
         vbox = QtGui.QVBoxLayout(self)
@@ -398,14 +407,22 @@ class MagnetListPanel(TaurusWidget):
         vbox.addWidget(self.table)
 
     def setModel(self, circuit):
-        print "MagnetListPanel setModel", circuit
+        print "----------------- MagnetListPanel setModel", circuit
         TaurusWidget.setModel(self, circuit)
         db = PyTango.Database()
+        print('------------- 1 ------------')
         if circuit:
+            print('------------- 1 ------------')
             magnets = db.get_device_property(circuit, "MagnetProxies")["MagnetProxies"]
-            if "SQF" in magnets[0]:
-                self.table.setModel(magnets, ["State", "TemperatureInterlock", "shuntResistance"])
+            print('------------- 1 ------------',magnets)
+            test_iko=False
+            if test_iko:
+                if "SQF" in magnets[0]:
+                    self.table.setModel(magnets, ["State", "TemperatureInterlock", "shuntResistance"])
+                else:
+                    self.table.setModel(magnets, ["State", "TemperatureInterlock"])
             else:
-                self.table.setModel(magnets, ["State", "TemperatureInterlock"])
+                self.table.setModel(circuit)
+                self.table.setModel("%s/%s" % (circuit, 'long_scalar'))
         else:
             self.table.setModel(None)
