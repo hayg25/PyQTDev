@@ -168,6 +168,7 @@ class TrimCoilCircuitPanel(TaurusWidget):
         self.field_widget = FieldPanel()
         self.field_tab = tabs.addTab(self.field_widget, "Field")
         # switchboard
+        print('------------- Just before SwitchBoard -------------')
         self.switchboard_widget = SwitchBoardPanel()
         tab = tabs.addTab(self.switchboard_widget, "Switchboard")
         self.switchboard_tab = tab
@@ -239,5 +240,5 @@ def trimcoil_main():
 
 
 if __name__ == "__main__":
-    # magnet_main()
-    trimcoil_main()
+    magnet_main()
+    # trimcoil_main()

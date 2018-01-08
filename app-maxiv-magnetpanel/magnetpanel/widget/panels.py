@@ -393,7 +393,7 @@ class MagnetListPanel(TaurusWidget):
         TaurusWidget.__init__(self, parent)
         self._setup_ui()
         print('MagnetListPanel juste avant setmodel')
-       # self.setModel('sys/tg_test/1')
+        self.setModel('sys/tg_test/1')
 
     def _setup_ui(self):
         vbox = QtGui.QVBoxLayout(self)
@@ -407,14 +407,22 @@ class MagnetListPanel(TaurusWidget):
         vbox.addWidget(self.table)
 
     def setModel(self, circuit):
-        print "MagnetListPanel setModel", circuit
+        print "----------------- MagnetListPanel setModel", circuit
         TaurusWidget.setModel(self, circuit)
         db = PyTango.Database()
+        print('------------- 1 ------------')
         if circuit:
+            print('------------- 1 ------------')
             magnets = db.get_device_property(circuit, "MagnetProxies")["MagnetProxies"]
-            if "SQF" in magnets[0]:
-                self.table.setModel(magnets, ["State", "TemperatureInterlock", "shuntResistance"])
+            print('------------- 1 ------------',magnets)
+            test_iko=False
+            if test_iko:
+                if "SQF" in magnets[0]:
+                    self.table.setModel(magnets, ["State", "TemperatureInterlock", "shuntResistance"])
+                else:
+                    self.table.setModel(magnets, ["State", "TemperatureInterlock"])
             else:
-                self.table.setModel(magnets, ["State", "TemperatureInterlock"])
+                self.table.setModel(circuit)
+                self.table.setModel("%s/%s" % (circuit, 'long_scalar'))
         else:
             self.table.setModel(None)
