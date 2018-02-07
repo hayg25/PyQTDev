@@ -1,5 +1,5 @@
 
-EXTRA_TAURUS_PATHS="/usr/local/lib/python2.7/dist-packages/maxwidgets/input /usr/local/lib/python2.7/dist-packages/maxwidgets/panel /usr/local/lib/python2.7/dist-packages/maxwidgets/display /usr/local/lib/python2.7/dist-packages/maxwidgets/extra_guiqwt"
+EXTRA_TAURUS_PATHS="/home/guler/.local/lib/python2.7/site-packages/maxwidgets/input /home/guler/.local/lib/python2.7/site-packages/maxwidgets/panel /home/guler/.local/lib/python2.7/site-packages/maxwidgets/display /home/guler/.local/lib/python2.7/site-packages/maxwidgets/extra_guiqwt"
 
 for path in $EXTRA_TAURUS_PATHS; do
     if ! echo $TAURUSQTDESIGNERPATH | grep -q $path; then
